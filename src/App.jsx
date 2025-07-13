@@ -1,14 +1,16 @@
-import AdminPanel from "./components/AdminPanel"
-import LoginForm from "./components/LoginForm"
+import React from 'react'
+import { Link } from 'react-router'
 
-
-
-function App() {
+const App = () => {
   return (
-    <div>
-      <h1 className="my-5 mx-3 text-amber-500 text-center text-4xl">project set up file react with tailwind css</h1>
-      <AdminPanel />
-      <LoginForm />
+    <div className='p-5 container mx-auto'>
+      <nav className='py-28 mt-16 bg-slate-50'>
+        <ul className='flex items-center justify-center space-x-4'>
+          <li><Link to="/register" className='px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-700'>Register</Link></li>
+          <li><Link to="/login" className='px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-700'>Login</Link></li>
+          
+        </ul>
+      </nav>
     </div>
   )
 }
